@@ -245,6 +245,11 @@ export const styles = makeStyles(() => ({
       width: "500rem",
       height:'100%'
 
+    },
+    input:{
+      "&.MuiMenu-list ":{
+        width:'275rem'
+      }
     }
   },
 }));
@@ -566,7 +571,7 @@ export default function CustomCalendar() {
     he: "הגדרה",
   };
   const localeLaunguageLabelMap = {
-    en: "Launguage",
+    en: "Language",
     fr: "Langue",
     ru: "параметр согласие",
     th: "ภาษา",
@@ -697,7 +702,6 @@ export default function CustomCalendar() {
             fullWidth={fullWidth}
             maxWidth={maxWidth}
             className={classes.dialog}
-
           >
             <DialogTitle id="Select locale">{localeSettingLabelMap[locale]}</DialogTitle>
             <DialogContent
@@ -714,7 +718,6 @@ export default function CustomCalendar() {
                     />
               </TabPanel>
               <TabPanel value={value} index={1}>
-              
                     <div className={
                       classes.timezoneSelect}>
                       <TimezoneSelect
@@ -723,8 +726,6 @@ export default function CustomCalendar() {
                         style={{ width: '100%', height: 35 }}
                       />
                     </div>
-                 
-              
               </TabPanel>
 
             </DialogContent>
